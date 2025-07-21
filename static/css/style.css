@@ -1,0 +1,76 @@
+/* Blog */ 
+
+.card {
+    border: none;
+}
+
+.card-img-top {
+    width: 100%; /* Full width */
+    height: 200px;
+    object-fit: cover; /* Keeps the aspect ratio */
+    border-radius: 8px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; /* Ensures the container has enough space */
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: white;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.masthead img {
+    width: 100%; /* Ensures full width */
+    height: auto; /* Allows dynamic scaling */
+    max-height: 250px; /* Prevents it from being too large */
+    object-fit: cover; /* Maintains aspect ratio */
+    border-radius: 8px;
+}
+
+.post-link {
+    text-decoration: none;
+    color: var(--brand-blue);
+}
+
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-subtitle {
+    color: gray;
+}
+
+.modal-backdrop {
+    display: none !important;
+    z-index: -1 !important;
+    opacity: 0 !important;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
