@@ -1,3 +1,57 @@
+/* === Google Fonts === */
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* === Root Variables: Colors & Fonts === */
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Raleway", sans-serif;
+    --primary-color: #94e6ed; 
+    --secondary-color: #f8b133; 
+    --tertiary-color: #c3b3d6;
+}
+
+/* === Base Layout === */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    margin-top: 39.33px; /* Likely for fixed navbar space */
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1; /* Push footer to bottom */
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+  
+/* Hidden by default */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* Visible when in viewport */
+  .scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* === Typography === */
+h1, h2, h3, h4 {
+    font-family: "Poppins";
+}
+
 /* Blog */ 
 
 .card {
@@ -74,3 +128,4 @@
   background-color: #bb2d3b;
   border-color: #b02a37;
 }
+
