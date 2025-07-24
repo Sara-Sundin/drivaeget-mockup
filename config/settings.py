@@ -13,7 +13,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
-    'saras-blogg-224c83431696.herokuapp.com/',
+    'saras-blogg-224c83431696.herokuapp.com',
     'localhost',  # Useful for local dev
     '127.0.0.1',
 ]
