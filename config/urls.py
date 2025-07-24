@@ -8,16 +8,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),  # 👈 bloggen visas direkt på /
-    path('summernote/', include('django_summernote.urls')),
-
-    # Authentication views
+    
+    # Auth views – måste komma FÖRE blog.urls
     path('signup/', CreateView.as_view(
         template_name='registration/signup.html',
         form_class=UserCreationForm,
         success_url='/'
     ), name='signup'),
-    
+
     path('login/', auth_views.LoginView.as_view(
         template_name='registration/login.html'
     ), name='login'),
@@ -25,6 +23,11 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(
         next_page='/'
     ), name='logout'),
+
+    # Blogg – kommer sist så att den inte fångar /signup/ etc
+    path('', include('blog.urls')),
+
+    path('summernote/', include('django_summernote.urls')),
 ]
 
 if settings.DEBUG:
