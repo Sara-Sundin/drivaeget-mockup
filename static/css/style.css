@@ -25,8 +25,8 @@ body {
     overflow-x: hidden;
 }
 
-main {
-    flex: 1; /* Push footer to bottom */
+.main-content {
+  flex: 1;
 }
 
 .row {
@@ -52,10 +52,33 @@ h1, h2, h3, h4 {
     font-family: "Poppins";
 }
 
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0 20px 0 20px;
+}
+
 /* Blog */ 
 
 .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Gör att alla kort fyller sin container */
     border: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.post-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img-top {
@@ -63,6 +86,20 @@ h1, h2, h3, h4 {
     height: 200px;
     object-fit: cover; /* Keeps the aspect ratio */
     border-radius: 8px;
+}
+
+.btn-dark {
+  min-height: 100px;
+  white-space: normal; /* så att långa titlar får radbrytning */
+  display: flex;           /* Gör att vi kan centrera innehållet */
+  align-items: center;     /* Vertikal centering */
+  justify-content: center; /* Horisontell centering */
+  white-space: normal;     /* Tillåter radbrytning om det behövs */
+  text-align: center;      /* Säkerställer att texten är centrerad */
+}
+
+.post-title {
+    font-size: 40px;
 }
 
 .image-container {
