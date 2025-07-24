@@ -125,14 +125,14 @@
                     <p class="flex">Log in to leave a comment</p>
 
                     <a class="cta-btn cta-btn--primary"
-                    href="{% url 'accounts:signup' %}?next={{ request.get_full_path }}%23commentForm">
+                    href="{% url 'signup' %}?next={{ request.get_full_path }}%23commentForm">
                         SIGN UP
                     </a>
 
                     <br>
 
                     <a class="cta-btn cta-btn--tertiary"
-                    href="{% url 'accounts:login' %}?next={{ request.get_full_path }}%23commentForm">
+                    href="{% url 'login' %}?next={{ request.get_full_path }}%23commentForm">
                         LOG IN
                     </a>
                 </div>
