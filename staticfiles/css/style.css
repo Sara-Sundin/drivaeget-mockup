@@ -1,0 +1,168 @@
+/* === Google Fonts === */
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* === Root Variables: Colors & Fonts === */
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Raleway", sans-serif;
+    --primary-color: #94e6ed; 
+    --secondary-color: #f8b133; 
+    --tertiary-color: #c3b3d6;
+}
+
+/* === Base Layout === */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    margin-top: 39.33px; /* Likely for fixed navbar space */
+    overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+  
+/* Hidden by default */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* Visible when in viewport */
+  .scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* === Typography === */
+h1, h2, h3, h4 {
+    font-family: "Poppins";
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0 20px 0 20px;
+}
+
+/* Blog */ 
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Gör att alla kort fyller sin container */
+    border: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.post-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+    width: 100%; /* Full width */
+    height: 200px;
+    object-fit: cover; /* Keeps the aspect ratio */
+    border-radius: 8px;
+}
+
+.btn-dark {
+  min-height: 100px;
+  white-space: normal; /* så att långa titlar får radbrytning */
+  display: flex;           /* Gör att vi kan centrera innehållet */
+  align-items: center;     /* Vertikal centering */
+  justify-content: center; /* Horisontell centering */
+  white-space: normal;     /* Tillåter radbrytning om det behövs */
+  text-align: center;      /* Säkerställer att texten är centrerad */
+}
+
+.post-title {
+    font-size: 40px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; /* Ensures the container has enough space */
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: white;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.masthead img {
+    width: 100%; /* Ensures full width */
+    height: auto; /* Allows dynamic scaling */
+    max-height: 250px; /* Prevents it from being too large */
+    object-fit: cover; /* Maintains aspect ratio */
+    border-radius: 8px;
+}
+
+.post-link {
+    text-decoration: none;
+    color: var(--brand-blue);
+}
+
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-subtitle {
+    color: gray;
+}
+
+.modal-backdrop {
+    display: none !important;
+    z-index: -1 !important;
+    opacity: 0 !important;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
